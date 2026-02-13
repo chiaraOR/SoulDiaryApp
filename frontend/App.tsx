@@ -2,10 +2,11 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import IndexScreen from './src/screens/IndexScreen';
+import LoginScreen from './src/screens/LoginScreen';
 
 export type RootStackParamList = {
   Index: undefined;
-  Details: { patientId: string }; // TODO: Esempio per il futuro
+  Login: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -26,6 +27,14 @@ export default function App() {
           name="Index" 
           component={IndexScreen} 
           options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="Login" 
+          component={LoginScreen} 
+          options={{ 
+            headerShown: false, // Nascondiamo l'header per farlo custom come nell'immagine
+            // Oppure metti true se vuoi la freccia "indietro" standard in alto
+          }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
