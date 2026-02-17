@@ -6,9 +6,8 @@ import {
   StyleSheet 
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { Colors } from '../constants/Colors'; // Assicurati del percorso
+import { Colors } from '../constants/Colors'; 
 
-// Definiamo il tipo per una singola nota
 export interface Note {
   id: number | string;
   day: string;
@@ -38,22 +37,22 @@ const NotesList = ({ notes, onNotePress }: NotesListProps) => {
             <Text style={styles.dateMonth}>{item.month}</Text>
           </View>
 
-          {/* Contenuto Nota */}
+          {/* Note content */}
           <View style={styles.diaryContent}>
             <Text style={styles.diaryText} numberOfLines={2} ellipsizeMode="tail">
               {item.text}
             </Text>
             
-            {/* Riga Orario */}
+            {/* Time */}
             <View style={styles.timeContainer}>
-              <Ionicons name="time-outline" size={14} color="#999" style={{ marginRight: 4 }} /> 
+              <Ionicons name="time-outline" size={14} color={Colors.grey} style={{ marginRight: 4 }} /> 
               <Text style={styles.diaryTime}>{item.time}</Text>
             </View>
           </View>
 
-          {/* Freccia Dettaglio (Solo visiva ora, il click è sulla card) */}
+          {/* Arrow icon */}
           <View>
-             <Ionicons name="chevron-forward" size={20} color="#D0D0D0" />
+             <Ionicons name="chevron-forward" size={20} color={Colors.grey} />
           </View>
         </TouchableOpacity>
       ))}
@@ -63,18 +62,16 @@ const NotesList = ({ notes, onNotePress }: NotesListProps) => {
 
 export default NotesList;
 
-// Stili incapsulati nel componente
 const styles = StyleSheet.create({
   diaryCard: {
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     borderRadius: 16,
     padding: 16,
     marginHorizontal: 24,
     marginBottom: 16,
     flexDirection: 'row',
     borderWidth: 1,
-    borderColor: '#F0F0F0',
-    // Ombra leggera
+    borderColor: Colors.borderInput,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
@@ -83,7 +80,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   dateBadge: {
-    backgroundColor: '#F0F8FF', // Azzurro chiarissimo
+    backgroundColor: Colors.backgroundInput, 
     borderRadius: 12,
     width: 60,
     height: 60,
@@ -91,17 +88,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 16,
     borderWidth: 1,
-    borderColor: '#E6F0FA',
+    borderColor: Colors.borderInput,
   },
   dateDay: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: Colors.primary || '#4A90E2',
+    color: Colors.primary,
   },
   dateMonth: {
     fontSize: 11,
     fontWeight: '700',
-    color: Colors.primary || '#4A90E2',
+    color: Colors.primary,
     textTransform: 'uppercase',
     marginTop: -2,
   },
@@ -111,11 +108,10 @@ const styles = StyleSheet.create({
   },
   diaryText: {
     fontSize: 15,
-    color: '#444',
+    color: Colors.textDark,
     lineHeight: 22,
     fontWeight: '500',
   },
-  // Nuovo stile contenitore per allineare perfettamente icona e testo
   timeContainer: {
     flexDirection: 'row', 
     alignItems: 'center', 
@@ -123,10 +119,8 @@ const styles = StyleSheet.create({
   },
   diaryTime: {
     fontSize: 12,
-    color: '#999',
+    color: Colors.grey,
     fontWeight: '500',
-    // Rimosso marginTop: 6 che causava il disallineamento
-    // Aggiunto lineHeight per centrare verticalmente col testo
     lineHeight: 14, 
   },
 });

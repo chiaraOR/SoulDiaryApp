@@ -7,7 +7,8 @@ import {
   StyleSheet 
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { Colors } from '../constants/Colors'; // Assicurati del percorso
+import { Colors } from '../constants/Colors';
+import AuthButton from './AuthButton';
 
 interface NoteFormProps {
   noteText: string;
@@ -30,7 +31,7 @@ const NoteForm = ({
   return (
     <View style={styles.container}>
       
-      {/* AREA INPUT */}
+      {/* INPUT AREA */}
       <View style={styles.inputWrapper}>
         <TextInput
           style={styles.textInput}
@@ -41,17 +42,17 @@ const NoteForm = ({
           onChangeText={setNoteText}
         />
         
-        {/* Icona Microfono */}
+        {/* Microphone Icon */}
         <TouchableOpacity 
           style={styles.micButton} 
           onPress={onVoiceInput}
           activeOpacity={0.8}
         >
-          <Ionicons name="mic" size={22} color={Colors.primary || '#4A90E2'} />
+          <Ionicons name="mic" size={22} color={Colors.primary} />
         </TouchableOpacity>
       </View>
 
-      {/* CASELLA DI SELEZIONE (CHECKBOX) */}
+      {/* CHECKBOX */}
       <TouchableOpacity 
         style={styles.checkboxContainer}
         onPress={() => setIsAiSupportEnabled(!isAiSupportEnabled)}
@@ -60,27 +61,24 @@ const NoteForm = ({
         <Ionicons 
           name={isAiSupportEnabled ? "checkbox" : "square-outline"} 
           size={24} 
-          color={isAiSupportEnabled ? (Colors.primary || '#4A90E2') : "#999"} 
+          color={isAiSupportEnabled ? (Colors.primary) : Colors.grey} 
         />
         <Text style={styles.checkboxLabel}>Genera automaticamente frasi di supporto</Text>
       </TouchableOpacity>
       
-      {/* BOTTONE SALVA NOTA */}
-      <TouchableOpacity 
-        style={styles.saveButton} 
+      {/* Save Note Button */}
+      <AuthButton 
+        title="Salva nota" 
         onPress={onSave}
-        activeOpacity={0.9}
-      >
-        <Text style={styles.saveButtonText}>Salva nota</Text>
-      </TouchableOpacity>
-
+        variant="primary"
+      />
     </View>
   );
 };
 
 export default NoteForm;
 
-// Stili specifici del form
+
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 24,
@@ -92,24 +90,23 @@ const styles = StyleSheet.create({
   },
   textInput: {
     fontSize: 16,
-    color: '#333',
+    color: Colors.textDark,
     minHeight: 140,
     textAlignVertical: 'top',
-    backgroundColor: '#F9F9F9',
+    backgroundColor: Colors.backgroundInput,
     borderRadius: 16,
     padding: 15,
-    paddingRight: 50, // Spazio per il microfono
+    paddingRight: 50, 
     borderWidth: 1,
-    borderColor: '#E0E0E0',
+    borderColor: Colors.borderInput,
   },
   micButton: {
     position: 'absolute',
     bottom: 15,
     right: 15,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     padding: 8,
     borderRadius: 20,
-    // Ombra
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -123,26 +120,7 @@ const styles = StyleSheet.create({
   },
   checkboxLabel: {
     fontSize: 14,
-    color: '#555',
+    color: Colors.grey,
     marginLeft: 10,
-  },
-  saveButton: {
-    backgroundColor: Colors.primary || '#4A90E2',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 15,
-    borderRadius: 12,
-    // Ombra bottone
-    shadowColor: Colors.primary || '#4A90E2',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 4,
-  },
-  saveButtonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
+  }
 });

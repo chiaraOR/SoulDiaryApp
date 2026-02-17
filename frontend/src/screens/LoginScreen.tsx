@@ -20,7 +20,6 @@ export default function LoginScreen({ navigation }: Props) {
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
   return (
-    // AGGIUNTO SafeAreaView per gestire correttamente la posizione su schermi con notch
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.background }} edges={['top', 'left', 'right', 'bottom']}>
       <KeyboardAvoidingView 
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -61,7 +60,7 @@ export default function LoginScreen({ navigation }: Props) {
                   placeholderTextColor={Colors.placeholderInput} 
                   value={password}
                   onChangeText={setPassword}
-                  secureTextEntry={!isPasswordVisible} // Nasconde il testo se false
+                  secureTextEntry={!isPasswordVisible} 
                 />
                 <TouchableOpacity onPress={() => setPasswordVisible(!isPasswordVisible)}>
                   <Ionicons 
@@ -76,7 +75,7 @@ export default function LoginScreen({ navigation }: Props) {
               <View style={{ marginTop: 10 }}>
                   <AuthButton 
                     title="Accedi" 
-                    onPress={() => navigation.navigate('DoctorHome')}
+                    onPress={() => navigation.navigate('PatientHome')}
                     variant="primary"
                   />
               </View>
@@ -91,9 +90,7 @@ export default function LoginScreen({ navigation }: Props) {
             </View>
           </View>
         </TouchableWithoutFeedback>
-
-        {/* Footer rimane fuori da TouchableWithoutFeedback ma dentro KeyboardAvoidingView e SafeAreaView */}
-        <Footer backgroundColor={Colors.background} />
+        <Footer/>
 
       </KeyboardAvoidingView>
     </SafeAreaView>

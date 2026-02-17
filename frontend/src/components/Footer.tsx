@@ -3,14 +3,9 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../constants/Colors';
 
-// Definiamo l'interfaccia per accettare il colore di sfondo della schermata
-interface FooterProps {
-  backgroundColor?: string;
-}
-
-export default function Footer({ backgroundColor }: FooterProps) {
+export default function Footer() {
   return (
-    <View style={[styles.container, { backgroundColor: backgroundColor || '#fff' }]}>
+    <View style={[styles.container]}>
       <Text style={styles.text}>
         <Ionicons name="alert-circle-outline" size={13} color={Colors.textGray} />
         {'  '}L'IA può commettere errori.
@@ -25,11 +20,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 10,
-    borderTopWidth: 1,
-    borderTopColor: '#F5F5F5', // Linea sottile per staccarlo dalle Tabs
   },
   text: {
     fontSize: 12,
-    color: Colors.textGray || '#999',
+    color: Colors.textGray,
   },
 });
