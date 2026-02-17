@@ -3,8 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../../constants/Colors';
 import { Platform } from 'react-native';
-
-// Schermate
 import DoctorHomeScreen from './DoctorHomeScreen';
 import DoctorProfileScreen from './DoctorProfileScreen';
 

@@ -1,17 +1,16 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Colors } from '../../constants/Colors';
 
 export const doctorHomeStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F4F6F8', // Sfondo leggermente grigio per risaltare le card
+    backgroundColor: '#F4F6F8', 
   },
   scrollContent: {
     flexGrow: 1,
     paddingBottom: 24,
   },
   
-  // Header della pagina (Sotto la Navbar)
   pageHeader: {
     paddingHorizontal: 24,
     paddingVertical: 20,
@@ -27,7 +26,6 @@ export const doctorHomeStyles = StyleSheet.create({
     marginTop: 4,
   },
 
-  // Barra di Ricerca
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -39,7 +37,6 @@ export const doctorHomeStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E0E0E0',
     marginBottom: 20,
-    // Ombra leggera
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
@@ -53,12 +50,12 @@ export const doctorHomeStyles = StyleSheet.create({
     color: '#333',
   },
 
-  // Lista Pazienti
+  // Patient List
   listContainer: {
     paddingHorizontal: 24,
   },
   
-  // Card Paziente
+  // Patient Card
   patientCard: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -106,7 +103,7 @@ export const doctorHomeStyles = StyleSheet.create({
     width: 10,
     height: 10,
     borderRadius: 5,
-    backgroundColor: '#4CD964', // Verde (es. diario aggiornato)
+    backgroundColor: '#4CD964', 
     marginLeft: 10,
   },
 });

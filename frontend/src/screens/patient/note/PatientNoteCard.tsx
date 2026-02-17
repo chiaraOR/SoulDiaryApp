@@ -6,7 +6,7 @@ import { Colors } from '../../../constants/Colors';
 interface PatientNoteCardProps {
   text: string;
   time: string;
-  primaryColor?: string; // Opzionale, se vuoi passare un colore diverso dal default
+  primaryColor?: string; 
 }
 
 const PatientNoteCard = ({ 
@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 16,
     padding: 20,
-    // Ombra "Soul Diary"
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.08,

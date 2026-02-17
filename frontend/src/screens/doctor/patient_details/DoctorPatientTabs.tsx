@@ -6,7 +6,6 @@ import { Colors } from '../../../constants/Colors';
 
 const Tab = createMaterialTopTabNavigator();
 
-// --- SCHERMATA NOTE ---
 function PatientNotesScreen() {
   return (
     <ScrollView style={styles.tabContainer} showsVerticalScrollIndicator={false}>
@@ -83,7 +82,6 @@ function PatientMoodScreen() {
   );
 }
 
-// --- NAVIGATORE EXPORT ---
 export default function DoctorPatientTabs() {
   return (
     <Tab.Navigator

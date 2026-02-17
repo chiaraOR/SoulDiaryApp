@@ -5,8 +5,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { Colors } from '../../../constants/Colors';
 import { RootStackParamList } from '../../../../App';
-
-// IMPORTIAMO IL COMPONENTE DELLE TABS CREATO SOPRA
 import DoctorPatientTabs from './DoctorPatientTabs';
 
 type ScreenRouteProp = RouteProp<RootStackParamList, 'DoctorPatientScreen'>;
@@ -19,7 +17,6 @@ export default function DoctorPatientScreen() {
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
       
-      {/* --- HEADER SUPERIORE (FISSO) --- */}
       <View style={styles.headerContainer}>
         <View style={styles.navBar}>
           <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
@@ -42,7 +39,6 @@ export default function DoctorPatientScreen() {
         </View>
       </View>
 
-      {/* --- CONTENUTO TABS --- */}
       <DoctorPatientTabs />
 
     </SafeAreaView>

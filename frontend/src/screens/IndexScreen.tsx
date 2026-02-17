@@ -18,14 +18,12 @@ export default function IndexScreen({ navigation }: Props) {
 
       <View style={indexStyles.contentContainer}>
         
-        {/* Header */}
         <Logo />
 
         <Text style={indexStyles.tagline}>
           Il diario digitale, sempre al tuo fianco.
         </Text>
 
-        {/* Buttons */}
         <View style={indexStyles.buttonsContainer}>
           <AuthButton
             title="Accedi"
@@ -43,7 +41,6 @@ export default function IndexScreen({ navigation }: Props) {
         </View>
       </View>
 
-      {/* Footer */}
       <Footer/>
 
     </View>

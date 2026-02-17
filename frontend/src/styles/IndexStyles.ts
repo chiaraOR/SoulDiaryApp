@@ -4,8 +4,8 @@ import { Colors } from '../constants/Colors';
 
 export const indexStyles = StyleSheet.create({
   contentContainer: {
-    flex: 1, // GET FULL HEIGHT
-    justifyContent: 'center', // VERTICAL CENTER
+    flex: 1, 
+    justifyContent: 'center', 
     alignItems: 'center',
     width: '100%',
   },

@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   doctorCard: {
-    backgroundColor: '#F9FBFD', // Grigio/Azzurro molto chiaro professionale
+    backgroundColor: '#F9FBFD', 
     borderRadius: 16,
     padding: 16,
     borderWidth: 1,
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: '#2ECC71', // Verde medico
+    backgroundColor: '#2ECC71', 
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,

@@ -10,13 +10,12 @@ export const patientHomeStyles = StyleSheet.create({
     paddingBottom: 100,
   },
   
-  // HEADER CENTRALE
   header: {
     paddingHorizontal: 24,
     paddingTop: Platform.OS === 'ios' ? 60 : 50,
     paddingBottom: 20,
     backgroundColor: Colors.background,
-    alignItems: 'center', // Centra tutto orizzontalmente
+    alignItems: 'center', 
     borderBottomWidth: 1,
     borderBottomColor: '#f9f9f9',
   },
@@ -36,7 +35,6 @@ export const patientHomeStyles = StyleSheet.create({
     lineHeight: 22,
   },
 
-  // TITOLO SEZIONE CON ICONA (Nuova Nota)
   sectionHeaderContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -48,27 +46,26 @@ export const patientHomeStyles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333',
-    marginLeft: 8, // Spazio dall'icona
+    marginLeft: 8, 
   },
 
-  // AREA INPUT E MICROFONO
   newNoteContainer: {
     marginHorizontal: 24,
     marginBottom: 20,
   },
   inputWrapper: {
-    position: 'relative', // Necessario per posizionare il microfono
+    position: 'relative', 
     marginBottom: 15,
   },
   textInput: {
     fontSize: 16,
     color: '#333',
-    minHeight: 140, // Altezza generosa
+    minHeight: 140, 
     textAlignVertical: 'top',
     backgroundColor: '#F9F9F9',
     borderRadius: 16,
     padding: 15,
-    paddingRight: 50, // Spazio extra a destra per non scrivere sopra il microfono
+    paddingRight: 50, 
     borderWidth: 1,
     borderColor: '#E0E0E0',
   },
@@ -86,7 +83,6 @@ export const patientHomeStyles = StyleSheet.create({
     elevation: 2,
   },
 
-  // CHECKBOX ROW
   checkboxContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -98,7 +94,6 @@ export const patientHomeStyles = StyleSheet.create({
     marginLeft: 10,
   },
 
-  // BOTTONE SALVA
   saveButton: {
     backgroundColor: Colors.primary || '#4A90E2',
     flexDirection: 'row',
@@ -118,7 +113,6 @@ export const patientHomeStyles = StyleSheet.create({
     fontWeight: 'bold',
   },
 
-  // CARD CRONOLOGIA DIARIO
   historyTitle: {
     fontSize: 20,
     fontWeight: 'bold',

@@ -4,16 +4,14 @@ import { Colors } from '../../constants/Colors';
 export const profileScreenStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.background || '#fff', // Rimossi 'yellow'
+    backgroundColor: Colors.background || '#fff', 
   },
   scrollContent: {
-    flexGrow: 1, // Fondamentale per il centramento nello ScrollView
-    justifyContent: 'center', // Centra verticalmente il contenuto
+    flexGrow: 1, 
+    justifyContent: 'center', 
     paddingBottom: 24, 
-    // Rimossi 'green' e padding esagerato
   },
   
-  // HEADER (Opzionale se usi la Navbar esterna, ma lasciato per compatibilità)
   header: {
     paddingHorizontal: 24,
     paddingTop: Platform.OS === 'ios' ? 60 : 50,
@@ -36,7 +34,6 @@ export const profileScreenStyles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  // CARD GENERICA (Base per Profilo e Medico)
   card: {
     backgroundColor: '#fff',
     borderRadius: 20,
@@ -45,7 +42,6 @@ export const profileScreenStyles = StyleSheet.create({
     marginBottom: 20,
     borderWidth: 1,
     borderColor: '#F0F0F0',
-    // Ombra
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.05,
@@ -53,7 +49,6 @@ export const profileScreenStyles = StyleSheet.create({
     elevation: 3,
   },
 
-  // SEZIONE DATI PAZIENTE
   avatarContainer: {
     alignSelf: 'center',
     width: 90,
@@ -80,7 +75,6 @@ export const profileScreenStyles = StyleSheet.create({
     marginBottom: 20,
   },
   
-  // RIGHE INFORMAZIONI
   infoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -99,7 +93,6 @@ export const profileScreenStyles = StyleSheet.create({
     fontWeight: '500',
   },
 
-  // SEZIONE LABEL (Titoli sopra le card)
   sectionLabel: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -109,7 +102,6 @@ export const profileScreenStyles = StyleSheet.create({
     marginBottom: 10,
   },
 
-  // CARD MEDICO MINI
   doctorRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -118,7 +110,7 @@ export const profileScreenStyles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
-    backgroundColor: '#EBF4FF', // Azzurro chiaro
+    backgroundColor: '#EBF4FF', 
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 15,
@@ -137,7 +129,6 @@ export const profileScreenStyles = StyleSheet.create({
     color: '#333',
   },
 
-  // BOTTONE LOGOUT
   logoutButton: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -148,10 +139,10 @@ export const profileScreenStyles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     borderColor: '#FFD1D1',
-    backgroundColor: '#FFF5F5', // Rosso molto chiaro
+    backgroundColor: '#FFF5F5', 
   },
   logoutText: {
-    color: '#D93025', // Rosso Google
+    color: '#D93025', 
     fontSize: 16,
     fontWeight: 'bold',
     marginLeft: 8,

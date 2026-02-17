@@ -31,7 +31,6 @@ export default function RegisterScreen({ navigation }: Props) {
   const [isPasswordVisible, setPasswordVisible] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
 
-  // Form State
   const [form, setForm] = useState({
     nome: '',
     cognome: '',

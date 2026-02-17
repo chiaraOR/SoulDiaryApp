@@ -14,7 +14,6 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { Colors } from '../../constants/Colors';
 
-// Mock Data Pazienti
 const MOCK_PATIENTS = [
   { id: '1', name: 'Mario Rossi', lastUpdate: 'Oggi, 14:30', hasNew: true },
   { id: '2', name: 'Luigi Verdi', lastUpdate: 'Ieri, 09:15', hasNew: false },
@@ -26,7 +25,6 @@ const MOCK_PATIENTS = [
 export default function DoctorHomeScreen({ navigation }: any) {
   const [searchText, setSearchText] = useState('');
 
-  // Filtra pazienti in base alla ricerca
   const filteredPatients = MOCK_PATIENTS.filter(p => 
     p.name.toLowerCase().includes(searchText.toLowerCase())
   );
@@ -41,13 +39,11 @@ export default function DoctorHomeScreen({ navigation }: any) {
         contentContainerStyle={doctorHomeStyles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {/* Intestazione */}
         <View style={doctorHomeStyles.pageHeader}>
           <Text style={doctorHomeStyles.pageTitle}>I tuoi Pazienti</Text>
           <Text style={doctorHomeStyles.pageSubtitle}>Gestisci le cartelle cliniche e i diari</Text>
         </View>
 
-        {/* Barra di Ricerca */}
         <View style={doctorHomeStyles.searchContainer}>
           <Ionicons name="search-outline" size={20} color="#999" />
           <TextInput 
@@ -59,7 +55,6 @@ export default function DoctorHomeScreen({ navigation }: any) {
           />
         </View>
 
-        {/* Lista Pazienti */}
         <View style={doctorHomeStyles.listContainer}>
           {filteredPatients.map((patient) => (
             <TouchableOpacity 
@@ -67,20 +62,17 @@ export default function DoctorHomeScreen({ navigation }: any) {
               style={doctorHomeStyles.patientCard}
               onPress={() => navigation.navigate('DoctorPatientScreen', { patientId: patient.id, patientName: patient.name })}
             >
-              {/* Avatar con iniziali */}
               <View style={doctorHomeStyles.avatar}>
                 <Text style={doctorHomeStyles.avatarText}>
                   {patient.name.split(' ').map(n => n[0]).join('')}
                 </Text>
               </View>
 
-              {/* Info */}
               <View style={doctorHomeStyles.patientInfo}>
                 <Text style={doctorHomeStyles.patientName}>{patient.name}</Text>
                 <Text style={doctorHomeStyles.lastUpdate}>Ultimo diario: {patient.lastUpdate}</Text>
               </View>
 
-              {/* Indicatore novità o freccia */}
               {patient.hasNew && (
                 <View style={doctorHomeStyles.statusIndicator} />
               )}

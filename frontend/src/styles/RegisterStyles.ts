@@ -26,39 +26,38 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
 
-  // --- NUOVI RIQUADRI DI SELEZIONE ---
   selectionContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 25,
   },
   selectionBox: {
-    width: '48%', // Occupa quasi metà schermo
+    width: '48%', 
     paddingVertical: 20,
     paddingHorizontal: 10,
     borderWidth: 2,
-    borderColor: '#E0E0E0', // Colore bordo inattivo
+    borderColor: '#E0E0E0', 
     borderRadius: 12,
     backgroundColor: '#FAFAFA',
     alignItems: 'center',
     justifyContent: 'center',
   },
   selectedBox: {
-    borderColor: '#4A90E2', // Colore bordo attivo (Blu)
-    backgroundColor: '#F0F8FF', // Sfondo leggermente azzurro
+    borderColor: '#4A90E2', 
+    backgroundColor: '#F0F8FF', 
   },
   boxText: {
     fontSize: 16,
     fontWeight: '600',
     color: '#888',
-    marginTop: 5, // Spazio se aggiungi icone
+    marginTop: 5, 
   },
   selectedBoxText: {
-    color: '#4A90E2', // Testo blu quando attivo
+    color: '#4A90E2', 
     fontWeight: 'bold',
   },
 
-  // --- FORM INPUTS (uguale a prima) ---
+  // --- FORM INPUTS ---
   inputContainer: {
     marginBottom: 15,
   },
@@ -85,7 +84,7 @@ export default StyleSheet.create({
     width: '48%',
   },
 
-  // --- BOTTONI ---
+  // --- BUTTONS ---
   registerButton: {
     backgroundColor: '#4A90E2',
     paddingVertical: 15,
@@ -113,7 +112,6 @@ export default StyleSheet.create({
     fontSize: 16,
   },
   
-  // Date Picker style
   dateButton: {
     backgroundColor: '#f9f9f9',
     borderWidth: 1,

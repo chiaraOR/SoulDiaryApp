@@ -28,15 +28,12 @@ export default function LoginScreen({ navigation }: Props) {
         <StatusBar style="dark" />
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View>
-            {/* HEADER */}
             <Logo scale={0.75}/>
 
-            {/* WHITE CARD */}
             <View style={commonStyles.card}>
               <Text style={commonStyles.welcomeTitle}>Bentornato!</Text>
               <Text style={commonStyles.welcomeSub}>Accedi al tuo account per continuare</Text>
 
-              {/* Input Email */}
               <Text style={commonStyles.inputLabel}>Email</Text>
               <View style={commonStyles.inputContainer}>
                 <TextInput 
@@ -50,7 +47,6 @@ export default function LoginScreen({ navigation }: Props) {
                 />
               </View>
 
-              {/* Input Password */}
               <Text style={commonStyles.inputLabel}>Password</Text>
               <View style={commonStyles.inputContainer}>
                 <TextInput 
@@ -70,7 +66,6 @@ export default function LoginScreen({ navigation }: Props) {
                 </TouchableOpacity>
               </View>
 
-              {/* BUTTON */}
               <View style={{ marginTop: 10 }}>
                   <AuthButton 
                     title="Accedi" 
@@ -79,7 +74,6 @@ export default function LoginScreen({ navigation }: Props) {
                   />
               </View>
 
-              {/* LINK SIGN UP */}
               <View style={loginStyles.registerContainer}>
                 <Text style={loginStyles.registerText}>Non hai un account? </Text>
                   <TouchableOpacity onPress={() => navigation.navigate('Register')}>

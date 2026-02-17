@@ -4,7 +4,6 @@ import {
   Text, 
   ScrollView, 
   TouchableOpacity, 
-  StyleSheet, 
   StatusBar
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -54,7 +53,6 @@ export default function NoteDetailScreen() {
     <SafeAreaView style={commonStyles.containerPage} edges={['top']}>
       <StatusBar barStyle="dark-content" />
 
-      {/* --- HEADER --- */}
       <View style={noteStyles.header}>
         <TouchableOpacity 
           onPress={() => navigation.goBack()} 

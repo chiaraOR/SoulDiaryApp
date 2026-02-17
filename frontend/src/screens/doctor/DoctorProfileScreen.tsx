@@ -17,7 +17,6 @@ import Footer from '../../components/Footer';
 export default function DoctorProfileScreen() {
   const navigation = useNavigation<any>();
 
-  // Dati del Medico (Loggato)
   const doctorData = {
     nome: 'Giuseppe',
     cognome: 'Veronesi',

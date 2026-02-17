@@ -16,7 +16,6 @@ const AiInsightCard = ({
   return (
     <View style={styles.sectionContainer}>
        <View style={styles.sectionHeader}>
-          {/* Icona "Scintille/AI" */}
           <MaterialCommunityIcons 
             name="robot-excited-outline" 
             size={22} 
@@ -26,9 +25,7 @@ const AiInsightCard = ({
           <Text style={styles.sectionTitle}>Supporto AI</Text>
       </View>
       
-      {/* Card con gradiente o stile distintivo */}
       <View style={[styles.aiCard, { backgroundColor: `${primaryColor}10` }]}> 
-        {/* Barra laterale colorata */}
         <View style={[styles.aiAccentBar, { backgroundColor: primaryColor }]} />
         
         <Text style={styles.aiText}>{text}</Text>
@@ -69,7 +66,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     overflow: 'hidden',
     borderWidth: 1,
-    borderColor: 'rgba(74, 144, 226, 0.2)', // Puoi rendere dinamico anche questo se vuoi
+    borderColor: 'rgba(74, 144, 226, 0.2)', 
   },
   aiAccentBar: {
     position: 'absolute',

@@ -7,12 +7,11 @@ export const doctorScreenStyles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   scrollContent: {
-    flexGrow: 1, // Fondamentale per il centramento
-    justifyContent: 'center', // Centra la card verticalmente
-    paddingBottom: 24, // Spazio standard dal footer
+    flexGrow: 1, 
+    justifyContent: 'center', 
+    paddingBottom: 24, 
   },
   
-  // HEADER (Opzionale, lasciato per compatibilità)
   header: {
     paddingHorizontal: 24,
     paddingTop: Platform.OS === 'ios' ? 60 : 50,
@@ -23,12 +22,11 @@ export const doctorScreenStyles = StyleSheet.create({
     alignItems: 'center',
   },
   
-  // Avatar/Icona
   avatarContainer: {
     width: 100,
     height: 100,
     borderRadius: 50,
-    backgroundColor: '#F0F8FF', // Azzurro chiarissimo
+    backgroundColor: '#F0F8FF', 
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 16,
@@ -52,7 +50,6 @@ export const doctorScreenStyles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  // DIVISORE
   divider: {
     height: 1,
     width: '100%',
@@ -60,7 +57,6 @@ export const doctorScreenStyles = StyleSheet.create({
     marginBottom: 24,
   },
 
-  // RIGHE CONTATTI
   contactRow: {
     flexDirection: 'row',
     alignItems: 'center',

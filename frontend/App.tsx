@@ -16,7 +16,6 @@ export type RootStackParamList = {
   Register: undefined;
   PatientHome: undefined;
   DoctorHome: undefined;
-  // Assicurati che il nome qui corrisponda a quello nel Stack.Screen sotto
   DoctorPatientScreen: { patientId: string; patientName: string };
   NoteDetail: { noteId: string | number };
 };
@@ -58,11 +57,10 @@ export default function App() {
           options={{ headerShown: false }} 
         />
         
-        {/* AGGIUNTA ROTTA MANCANTE */}
         <Stack.Screen 
           name="DoctorPatientScreen" 
           component={DoctorPatientScreen} 
-          options={{ headerShown: false }} // Usiamo l'header personalizzato interno
+          options={{ headerShown: false }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
