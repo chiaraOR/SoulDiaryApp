@@ -28,6 +28,24 @@ export const commonStyles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 5,
   },
+
+  profileCard: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    marginHorizontal: 24,
+    padding: 24,
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 5,
+    borderWidth: 1,
+    borderColor: '#F0F0F0',
+    marginBottom: 'auto',
+    marginTop: 'auto',
+  },
+
   welcomeTitle: {
     fontSize: 22,
     fontWeight: 'bold',

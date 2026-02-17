@@ -2,7 +2,6 @@ import React from 'react';
 import { 
   View, 
   Text, 
-  ScrollView, 
   TouchableOpacity, 
   StatusBar,
   Linking 
@@ -13,9 +12,9 @@ import { doctorScreenStyles } from '../../styles/patient/DoctorScreenStyles';
 import Footer from '../../components/Footer';
 import { Colors } from '../../constants/Colors';
 import Navbar from '../../components/Navbar';
+import { commonStyles } from '../../styles/CommonStyles';
 
 export default function DoctorScreen() {
-  // Dati finti del medico (da sostituire con dati reali)
   const doctorInfo = {
     name: 'Dott. Giuseppe Veronesi',
     specialization: 'Psicoterapeuta',
@@ -34,35 +33,23 @@ export default function DoctorScreen() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }} edges={['top', 'left', 'right', 'bottom']}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
-      
-      {/* Navbar fissa in alto */}
+    <SafeAreaView style={commonStyles.containerPage} edges={['top']}>
+      <StatusBar barStyle="dark-content"/>
+
       <Navbar />
 
-      {/* ScrollView che occupa lo spazio centrale */}
-      <ScrollView 
-        style={doctorScreenStyles.container} 
-        contentContainerStyle={doctorScreenStyles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-
-        {/* CARD PROFILO (Ora sarà centrata verticalmente) */}
-        <View style={doctorScreenStyles.profileCard}>
+      <View style={commonStyles.containerPage}>
+        <View style={[commonStyles.profileCard]}>
           
-          {/* Avatar / Icona */}
           <View style={doctorScreenStyles.avatarContainer}>
             <Ionicons name="medkit" size={48} color={Colors.primary || '#4A90E2'} />
           </View>
 
-          {/* Nome e Ruolo */}
           <Text style={doctorScreenStyles.doctorName}>{doctorInfo.name}</Text>
           <Text style={doctorScreenStyles.doctorSpecialization}>{doctorInfo.specialization}</Text>
 
-          {/* Linea Divisoria */}
           <View style={doctorScreenStyles.divider} />
 
-          {/* Email */}
           <TouchableOpacity style={doctorScreenStyles.contactRow} onPress={handleEmailPress}>
             <View style={doctorScreenStyles.iconContainer}>
               <Ionicons name="mail-outline" size={22} color="#666" />
@@ -74,7 +61,6 @@ export default function DoctorScreen() {
             <Ionicons name="chevron-forward" size={16} color="#ccc" />
           </TouchableOpacity>
 
-          {/* Indirizzo Studio */}
           <View style={doctorScreenStyles.contactRow}>
             <View style={doctorScreenStyles.iconContainer}>
               <Ionicons name="location-outline" size={22} color="#666" />
@@ -85,7 +71,6 @@ export default function DoctorScreen() {
             </View>
           </View>
 
-          {/* Telefono Studio */}
           <TouchableOpacity style={doctorScreenStyles.contactRow} onPress={handlePhonePress}>
             <View style={doctorScreenStyles.iconContainer}>
               <Ionicons name="call-outline" size={22} color="#666" />
@@ -98,10 +83,8 @@ export default function DoctorScreen() {
           </TouchableOpacity> 
         </View>
 
-      </ScrollView>
-
-      {/* Footer fisso in basso, fuori dalla ScrollView */}
-      <Footer />
+        <Footer />
+      </View>
     </SafeAreaView>
   );
 } 

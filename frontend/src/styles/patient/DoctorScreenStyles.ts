@@ -22,24 +22,6 @@ export const doctorScreenStyles = StyleSheet.create({
     borderBottomColor: '#f9f9f9',
     alignItems: 'center',
   },
-
-  // CARD PROFILO MEDICO
-  profileCard: {
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    marginHorizontal: 24,
-    // marginTop: 30, // RIMOSSO per permettere il centramento automatico
-    padding: 24,
-    alignItems: 'center',
-    // Ombra stile "Soul Diary"
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
-    shadowRadius: 12,
-    elevation: 5,
-    borderWidth: 1,
-    borderColor: '#F0F0F0',
-  },
   
   // Avatar/Icona
   avatarContainer: {
