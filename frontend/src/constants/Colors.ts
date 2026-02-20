@@ -2,13 +2,23 @@ export const Colors = {
   white: '#FFFFFF',
   grey: '#999',
   deepBlue: '#082F64',
+  
   primary: '#008CE3',
   background: '#F0F8FF',
+  shadow: '#000000',
 
   //Red colors
   red: '#D93025',
   lightRed: '#FFF5F5',
   borderRed: '#FFD1D1',
+
+  // Green colors
+  green: '#2ECC71',
+
+  //Violet
+  violet: '#8E24AA',
+  darkViolet: '#4A148C',
+  lightViolet: '#F3E5F5',
 
   // Text colors
   textDark: '#102A43',

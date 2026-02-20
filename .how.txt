@@ -2,6 +2,9 @@ Download:
 Node.js
 Expo Go app on smartphone
 
+Create frontend:
+npx create-expo-app@latest frontend --template blank-typescript
+
 Install frontend:
 cd .\frontend\
 npm install

@@ -1,48 +1,52 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import { indexStyles } from '../styles/IndexStyles';
-import { commonStyles } from '../styles/CommonStyles';
+import { View, Text, Button, StyleSheet } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../App';
-import AuthButton from '../components/AuthButton';
-import Logo from '../components/Logo';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { RootStackParamList } from '../../types';
+import { commonStyles } from '../styles/CommonStyles';
+import Logo from '../components/logos/Logo';
+import AuthButton from '../components/buttons/AuthButton';
+import { Colors } from '../constants/Colors';
 import Footer from '../components/Footer';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Index'>;
 
 export default function IndexScreen({ navigation }: Props) {
   return (
-    <View style={commonStyles.container}>
-      <StatusBar style="dark" />
+    <SafeAreaView style={commonStyles.container_not_log}>
+        <View style={[commonStyles.page, {gap: 10}]}>
+            <Logo />
+            <Text style={styles.tagline}>
+                Il diario digitale, sempre al tuo fianco
+            </Text>
+            <AuthButton
+                title="Accedi"
+                variant="primary"
+                iconName="log-in-outline"
+                onPress={() => navigation.navigate('Login')}
+            />
 
-      <View style={indexStyles.contentContainer}>
-        
-        <Logo />
-
-        <Text style={indexStyles.tagline}>
-          Il diario digitale, sempre al tuo fianco.
-        </Text>
-
-        <View style={indexStyles.buttonsContainer}>
-          <AuthButton
-            title="Accedi"
-            variant="primary"
-            iconName="log-in-outline"
-            onPress={() => navigation.navigate('Login')}
-          />
-
-          <AuthButton
-            title="Registrati"
-            variant="outline"
-            iconName="person-add-outline"
-            onPress={() => navigation.navigate('Register')}
-          />
+            <AuthButton
+                title="Registrati"
+                variant="outline"
+                iconName="person-add-outline"
+                onPress={() => navigation.navigate('Register')}
+            />
         </View>
-      </View>
-
-      <Footer/>
-
-    </View>
+        <Footer />
+      <StatusBar style="auto" />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+    tagline: {
+        fontSize: 16,
+        color: Colors.textGray,
+        textAlign: 'center',
+        fontWeight: '500',
+        lineHeight: 24,
+        marginBottom: 10
+  },
+});

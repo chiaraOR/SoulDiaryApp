@@ -8,7 +8,7 @@ export default function Footer() {
     <View style={[styles.container]}>
       <Text style={styles.text}>
         <Ionicons name="alert-circle-outline" size={13} color={Colors.textGray} />
-        {'  '}L'IA può commettere errori.
+        {'  '}L'IA può commettere errori
       </Text>
     </View>
   );
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 10,
-    marginTop: 'auto'
+    marginTop: 'auto',
   },
   text: {
     fontSize: 12,
